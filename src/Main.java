@@ -6,10 +6,6 @@ public class Main {
 
         ToyStore toyStore = new ToyStore();
 
-        toyStore.addToy(new Toy(1, "Teddy Bear", 10, 40));
-        toyStore.addToy(new Toy(2, "Doll", 15, 30));
-        toyStore.addToy(new Toy(3, "Car", 20, 30));
-
         Scanner scanner = new Scanner(System.in);
 
         while (true) {

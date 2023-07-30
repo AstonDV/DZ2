@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b4549b-46b9-4525-944a-5de16e6609a1" name="Changes" comment="Added method getAllToys">
+    <list default="true" id="07b4549b-46b9-4525-944a-5de16e6609a1" name="Changes" comment="Added methods saveToys and loadToys">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToyStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToyStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys.txt" beforeDir="false" afterPath="$PROJECT_DIR$/toys.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690699141700</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added methods saveToys and loadToys">
+      <created>1690700282865</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690700282865</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -89,6 +97,7 @@
     <MESSAGE value="Create class ToyStore" />
     <MESSAGE value="Edit class ToyStore and described logic" />
     <MESSAGE value="Added method getAllToys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added method getAllToys" />
+    <MESSAGE value="Added methods saveToys and loadToys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added methods saveToys and loadToys" />
   </component>
 </project>

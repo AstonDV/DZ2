@@ -62,6 +62,7 @@ public class ToyStore {
     }
 
     public void loadToys() {
+        toys.clear();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -78,7 +79,7 @@ public class ToyStore {
     }
 
     public void saveToys() {
-        try (FileWriter writer = new FileWriter(FILE_NAME)) {
+        try (FileWriter writer = new FileWriter(FILE_NAME, false)) {
             for (Toy toy : toys) {
                 writer.write(toy.getId() + "," + toy.getName() + "," + toy.getQuantity() + "," + toy.getFrequency() + System.lineSeparator());
             }
