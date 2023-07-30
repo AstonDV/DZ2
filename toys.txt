@@ -1,4 +1,5 @@
 1,Teddy Bear,10,40.0
 2,Doll,15,30.0
 3,Car,20,30.0
-4,Rocket,18,32.0
+4,Rocket,18,28.0
+5,Bunny,16,32.0

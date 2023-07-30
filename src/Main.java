@@ -66,6 +66,7 @@ public class Main {
 
                 if (selectedToy != null) {
                     toyStore.writeToFile("prize_toys.txt", selectedToy);
+                    System.out.println();
                     System.out.println("You won a " + selectedToy.getName());
                     System.out.println("Congratulations!!!");
 
@@ -73,6 +74,7 @@ public class Main {
                         toyStore.remove(selectedToy);
                     }
                 } else {
+                    System.out.println();
                     System.out.println("No toys available");
                 }
 

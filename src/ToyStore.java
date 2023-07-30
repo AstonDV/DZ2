@@ -37,13 +37,22 @@ public class ToyStore {
 
         float randomNumber = new Random().nextFloat() * totalFrequency;
 
-        for (Toy toy : toys) {
+        int selectedIndex = -1;
+        for (int i = 0; i < toys.size(); i++) {
+            Toy toy = toys.get(i);
             randomNumber -= toy.getFrequency();
 
             if (randomNumber <= 0) {
+                selectedIndex = i;
                 toy.setQuantity(toy.getQuantity() - 1);
-                return toy;
+                break;
             }
+        }
+
+        if (selectedIndex >= 0 && selectedIndex < toys.size()) {
+            Toy selectedToy = toys.get(selectedIndex);
+            toys.remove(selectedIndex);
+            return selectedToy;
         }
 
         return null;
