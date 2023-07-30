@@ -52,4 +52,8 @@ public class ToyStore {
             e.printStackTrace();
         }
     }
+
+    public void remove(Toy toy) {
+        toys.remove(toy);
+    }
 }
