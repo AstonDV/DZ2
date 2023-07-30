@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,9 +8,11 @@ import java.util.Random;
 
 public class ToyStore {
     private final List<Toy> toys;
+    private static final String FILE_NAME = "toys.txt";
 
     public ToyStore() {
         this.toys = new ArrayList<>();
+        loadToys();
     }
 
     public void addToy(Toy toy) {
@@ -55,6 +59,32 @@ public class ToyStore {
 
     public List<Toy> getAllToys() {
         return toys;
+    }
+
+    public void loadToys() {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                int id = Integer.parseInt(parts[0]);
+                String name = parts[1];
+                int quantity = Integer.parseInt(parts[2]);
+                float frequency = Float.parseFloat(parts[3]);
+                toys.add(new Toy(id, name, quantity, frequency));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveToys() {
+        try (FileWriter writer = new FileWriter(FILE_NAME)) {
+            for (Toy toy : toys) {
+                writer.write(toy.getId() + "," + toy.getName() + "," + toy.getQuantity() + "," + toy.getFrequency() + System.lineSeparator());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void remove(Toy toy) {

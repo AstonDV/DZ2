@@ -37,6 +37,8 @@ public class Main {
 
                 toyStore.addToy(new Toy(id, name, quantity, frequency));
                 System.out.println("Toy added successfully");
+
+                toyStore.saveToys();
             } else if (option == 2) {
                 List<Toy> allToys = toyStore.getAllToys();
 
@@ -49,6 +51,9 @@ public class Main {
                         System.out.println("- " + toy.getName() + " (id: " + toy.getId() + ", quantity: " + toy.getQuantity() + ")");
                     }
                 }
+
+                toyStore.saveToys();
+                toyStore.loadToys();
             } else if (option == 3) {
                 System.out.print("Enter toy id: ");
                 int id = scanner.nextInt();
@@ -58,6 +63,8 @@ public class Main {
 
                 toyStore.changeFrequency(id, frequency);
                 System.out.println("Toy frequency changed successfully");
+
+                toyStore.saveToys();
             } else if (option == 4) {
                 Toy selectedToy = toyStore.selectToy();
 
@@ -72,7 +79,10 @@ public class Main {
                 } else {
                     System.out.println("No toys available");
                 }
+
+                toyStore.saveToys();
             } else if (option == 5) {
+                toyStore.saveToys();
                 break;
             }
             System.out.println();
