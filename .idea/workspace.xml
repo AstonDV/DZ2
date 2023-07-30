@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b4549b-46b9-4525-944a-5de16e6609a1" name="Changes" comment="Create class ToyStore">
+    <list default="true" id="07b4549b-46b9-4525-944a-5de16e6609a1" name="Changes" comment="Edit class ToyStore and described logic">
+      <change afterPath="$PROJECT_DIR$/prize_toys.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToyStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToyStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +67,21 @@
       <option name="project" value="LOCAL" />
       <updated>1690695788253</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Edit class ToyStore and described logic">
+      <created>1690698044887</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690698044887</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Create class Toy" />
     <MESSAGE value="Create class ToyStore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create class ToyStore" />
+    <MESSAGE value="Edit class ToyStore and described logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit class ToyStore and described logic" />
   </component>
 </project>

@@ -47,10 +47,14 @@ public class ToyStore {
 
     public void writeToFile(String fileName, Toy toy) {
         try (FileWriter writer = new FileWriter(fileName, true)) {
-            writer.write(toy.getId() + "," + toy.getName() + System.lineSeparator());
+            writer.write(toy.getId() + ", " + toy.getName() + System.lineSeparator());
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<Toy> getAllToys() {
+        return toys;
     }
 
     public void remove(Toy toy) {

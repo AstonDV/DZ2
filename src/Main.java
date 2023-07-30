@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -11,12 +12,12 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("1. Add new toy");
-        System.out.println("2. Change toy frequency");
-        System.out.println("3. Play toy selection game");
-        System.out.println("4. Exit");
-
         while (true) {
+            System.out.println("1. Add new toy");
+            System.out.println("2. Show all available toys");
+            System.out.println("3. Change toy frequency");
+            System.out.println("4. Play toy selection game");
+            System.out.println("5. Exit");
             System.out.print("Select an option: ");
             int option = scanner.nextInt();
 
@@ -37,6 +38,18 @@ public class Main {
                 toyStore.addToy(new Toy(id, name, quantity, frequency));
                 System.out.println("Toy added successfully");
             } else if (option == 2) {
+                List<Toy> allToys = toyStore.getAllToys();
+
+                if (allToys.isEmpty()) {
+                    System.out.println("No toys available");
+                } else {
+                    System.out.println("Available toys:");
+
+                    for (Toy toy : allToys) {
+                        System.out.println("- " + toy.getName() + " (id: " + toy.getId() + ", quantity: " + toy.getQuantity() + ")");
+                    }
+                }
+            } else if (option == 3) {
                 System.out.print("Enter toy id: ");
                 int id = scanner.nextInt();
 
@@ -45,7 +58,7 @@ public class Main {
 
                 toyStore.changeFrequency(id, frequency);
                 System.out.println("Toy frequency changed successfully");
-            } else if (option == 3) {
+            } else if (option == 4) {
                 Toy selectedToy = toyStore.selectToy();
 
                 if (selectedToy != null) {
@@ -59,7 +72,7 @@ public class Main {
                 } else {
                     System.out.println("No toys available");
                 }
-            } else if (option == 4) {
+            } else if (option == 5) {
                 break;
             }
             System.out.println();
